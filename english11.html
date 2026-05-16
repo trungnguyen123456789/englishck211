@@ -1,0 +1,1452 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Practice 🌸 Unit 8, 9, 10</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #ff9a9e;
+            --secondary: #a1c4fd;
+            --accent: #fbc2eb;
+            --text-dark: #4a4a4a;
+            --text-light: #7f8fa6;
+            --bg-page: #f6f9fc;
+            --bg-card: #ffffff;
+        }
+
+        body { 
+            font-family: 'Nunito', sans-serif; 
+            background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%); 
+            color: var(--text-dark); 
+            margin: 0; 
+            padding: 20px; 
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        .container { 
+            max-width: 950px; 
+            margin: 0 auto; 
+            background: var(--bg-card); 
+            border-radius: 30px; 
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1); 
+            padding: 40px; 
+            position: relative;
+        }
+
+        .header { 
+            text-align: center; 
+            margin-bottom: 30px; 
+        }
+
+        .header h1 { 
+            color: var(--primary); 
+            font-weight: 800; 
+            font-size: 2.5rem; 
+            margin: 0;
+            text-shadow: 2px 2px 0px #ffe3e3;
+        }
+
+        .header p {
+            color: var(--text-light);
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-top: 5px;
+        }
+
+        /* Tabs styling */
+        .nav-tabs { 
+            display: flex; 
+            justify-content: center; 
+            gap: 15px; 
+            margin-bottom: 40px; 
+            flex-wrap: wrap; 
+        }
+
+        .nav-tabs button { 
+            font-family: 'Nunito', sans-serif; 
+            font-size: 1.1rem; 
+            font-weight: 700; 
+            padding: 12px 25px; 
+            border-radius: 50px; 
+            border: 2px solid transparent; 
+            background: #f1f2f6; 
+            color: var(--text-light); 
+            cursor: pointer; 
+            transition: all 0.3s ease; 
+        }
+
+        .nav-tabs button:hover {
+            background: #ffe3e3;
+            color: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        .nav-tabs button.active { 
+            background: var(--primary); 
+            color: white; 
+            transform: translateY(-3px); 
+            box-shadow: 0 8px 15px rgba(255,154,158,0.4); 
+        }
+
+        .unit-content { display: none; animation: fadeIn 0.5s ease; }
+        .unit-content.active { display: block; }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Headings */
+        h2 { 
+            color: var(--secondary); 
+            font-size: 2rem;
+            text-align: center;
+            border-bottom: 3px dashed var(--secondary); 
+            padding-bottom: 10px; 
+            margin-bottom: 30px;
+        }
+
+        h3 { 
+            color: #ffb6b9; 
+            background: #fff0f0;
+            display: inline-block;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 1.3rem;
+            margin-top: 30px;
+        }
+
+        /* Question Blocks */
+        .question { 
+            background: #fdfbfb; 
+            border: 2px solid #f1f2f6; 
+            border-radius: 20px; 
+            padding: 20px; 
+            margin-bottom: 20px; 
+            transition: all 0.3s; 
+        }
+
+        .question:hover {
+            border-color: var(--accent);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+        }
+
+        .question p { 
+            font-weight: 700; 
+            margin-top: 0; 
+            color: #2f3542;
+        }
+
+        /* Passage / Reading text */
+        .passage { 
+            background: #f8faff; 
+            padding: 20px; 
+            border-left: 5px solid var(--secondary); 
+            border-radius: 0 15px 15px 0;
+            margin-bottom: 25px; 
+            font-size: 1.05rem;
+        }
+
+        /* Inputs & Options */
+        .options label { 
+            display: block; 
+            padding: 12px 15px; 
+            background: #ffffff; 
+            border-radius: 15px; 
+            margin-bottom: 10px; 
+            cursor: pointer; 
+            border: 2px solid #f1f2f6; 
+            transition: all 0.2s; 
+            font-weight: 600;
+        }
+
+        .options label:hover { 
+            background: #fff5f5; 
+            border-color: #ffb6b9; 
+        }
+
+        .options input[type="radio"] { 
+            accent-color: var(--primary); 
+            transform: scale(1.3); 
+            margin-right: 10px; 
+        }
+
+        /* --- SỬA Ô ĐIỀN TỪ (LISTENING) CHO NHỎ GỌN --- */
+        input[type="text"] { 
+            border: 2px solid #eccc68; 
+            border-radius: 12px; 
+            padding: 6px 12px; 
+            font-family: 'Nunito', sans-serif; 
+            font-size: 1rem; 
+            width: 160px; /* Thu nhỏ kích thước */
+            display: inline-block; /* Cho phép nằm trên cùng một dòng với văn bản */
+            box-sizing: border-box; 
+            transition: all 0.3s; 
+            background: #fffbfa;
+            margin: 0 6px; /* Cách chữ xung quanh một chút */
+            text-align: center;
+        }
+
+        input[type="text"]:focus { 
+            outline: none; 
+            border-color: #ffa502; 
+            background: #fff;
+            box-shadow: 0 0 0 4px rgba(255, 165, 2, 0.1);
+        }
+
+        /* --- GIỮ NGUYÊN Ô TEXTAREA (WRITING) RỘNG 100% --- */
+        textarea { 
+            border: 2px solid #eccc68; 
+            border-radius: 15px; 
+            padding: 12px 15px; 
+            font-family: 'Nunito', sans-serif; 
+            font-size: 1rem; 
+            width: 100%; 
+            box-sizing: border-box; 
+            transition: all 0.3s; 
+            background: #fffbfa;
+            margin-top: 8px;
+        }
+
+        textarea:focus { 
+            outline: none; 
+            border-color: #ffa502; 
+            background: #fff;
+            box-shadow: 0 0 0 4px rgba(255, 165, 2, 0.1);
+        }
+
+        /* Tables */
+        table { 
+            width: 100%; 
+            border-collapse: separate; 
+            border-spacing: 0; 
+            border-radius: 15px; 
+            overflow: hidden; 
+            margin-bottom: 25px; 
+            border: 2px solid var(--secondary);
+        }
+        th { background: var(--secondary); color: white; padding: 15px; font-size: 1.1rem; }
+        td { background: #f8faff; padding: 15px; border-bottom: 1px solid #e1e8f0; }
+        td:last-child { border-right: none; }
+        tr:last-child td { border-bottom: none; }
+
+        /* Details / Transcript */
+        details { 
+            background: #f1f8ff; 
+            border-radius: 20px; 
+            padding: 15px 20px; 
+            margin-bottom: 25px; 
+            border: 1px dashed var(--secondary);
+        }
+        summary { 
+            font-weight: 800; 
+            color: #576574; 
+            cursor: pointer; 
+            outline: none; 
+            font-size: 1.1rem;
+        }
+        details p { margin-top: 15px; font-size: 0.95rem; }
+
+        /* Answer Key */
+        .answer-key { 
+            display: none; 
+            color: #2ed573; 
+            font-weight: 800; 
+            margin-top: 15px; 
+            padding: 12px 20px; 
+            background: #e8f8f5; 
+            border-radius: 15px; 
+            border-left: 4px solid #2ed573;
+        }
+        .show-answers .answer-key { 
+            display: block; 
+            animation: fadeIn 0.4s ease;
+        }
+
+        /* Submit Button */
+        .btn-submit { 
+            display: block; 
+            width: 100%; 
+            max-width: 350px; 
+            margin: 40px auto 0; 
+            background: linear-gradient(135deg, var(--primary) 0%, #ff7e67 100%); 
+            color: white; 
+            font-size: 1.2rem; 
+            font-weight: 800; 
+            padding: 18px; 
+            border-radius: 50px; 
+            border: none; 
+            cursor: pointer; 
+            box-shadow: 0 10px 20px rgba(255,126,103,0.3); 
+            transition: all 0.3s; 
+            font-family: 'Nunito', sans-serif;
+        }
+
+        .btn-submit:hover { 
+            transform: translateY(-3px) scale(1.02); 
+            box-shadow: 0 15px 25px rgba(255,126,103,0.4); 
+        }
+
+        .btn-submit:active {
+            transform: translateY(1px);
+        }
+
+        /* Cute decorative elements */
+        .decor { font-size: 1.5rem; margin: 0 5px; }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <h1><span class="decor">🧸</span> English Practice <span class="decor">✨</span></h1>
+        <p>Học tập vui vẻ cùng Unit 8, 9, 10 nha!</p>
+    </div>
+
+    <div class="nav-tabs">
+        <button class="tab-link active" onclick="openUnit(event, 'unit8')">🍓 Unit 8: Independence</button>
+        <button class="tab-link" onclick="openUnit(event, 'unit9')">🍀 Unit 9: Social Issues</button>
+        <button class="tab-link" onclick="openUnit(event, 'unit10')">🐳 Unit 10: The Ecosystem</button>
+    </div>
+
+    <div id="unit8" class="unit-content active">
+        <h2>UNIT 8: INDEPENDENCE 🌟</h2>
+        
+        <h3>I. LISTENING 🎧</h3>
+        <details>
+            <summary>Xem Transcript (Audio Script) 👀</summary>
+            <p><strong>Script 1:</strong><br>
+            Mai: I can see that you and Hoang Minh have become close friends, Lan<br>
+            Lan: We have. I really like him because he doesn't rely on other people for help and isn't influenced by other people's opinions.<br>
+            Mai: I see. So he's very independent.<br>
+            Lan: Yes. He's also a very responsible student. He always completes his tasks on time, and never needs to be reminded about assignments and other schoolwork.<br>
+            Mai: Right.<br>
+            Lan: He's also reliable. Last week, our group worked on a project and he was assigned the most difficult part of it. He tried very hard and did it well.<br>
+            Mai: It's good to have a friend you can rely on. He seems very determined.<br>
+            Lan: He is. Last month, we were given a very hard Maths problem. While most of us gave up, he spent the whole night on it and solved it in the end.<br>
+            Mai: That's amazing!<br>
+            Lan: Yeah. Even our Maths teacher was very surprised to read his answer. Another good thing about him is that he's self-reliant. He always tries to find solutions to his problems and seldom needs help from others.<br>
+            Mai: His parents must be really pleased to have such a son.<br>
+            Lan: Of course. He also helps around the house a lot. But he still has time to read, so he's well- informed about what's happening around the world. It's interesting to talk to him.<br>
+            Mai: I'll talk to him sometime.<br>
+            Lan: Yes, you should. He's also very confident and decisive. He always believes in himself, and I really admire his ability to make decisions so quickly. He's a very independent person!<br>
+            Mai: That's great! You're lucky to have a close friend like him.</p>
+            <hr style="border: 1px dashed #a1c4fd; margin: 15px 0;">
+            <p><strong>Script 2:</strong><br>
+            MC: Hello and welcome to Life Skills, the most popular radio show for teens and parents. Today I’ve invited three Grade 11 students to share with us how their parents help them to become independent. Long, would you like to start?<br>
+            Long: Hi. well. I’m the only child, so my parents tend to be overprotective of me. They didn’t let me do any household chores and drove me to school until finished Grade 9. However, since I was a little child. I’ve always been encouraged to voice my opinions. My parents even aske for my opinion before they make important family decisions.<br>
+            MC: That’s great. That helps you develop self-confidence. And Tuan? How do your parents help you become independent?<br>
+            Tuan: Well, my parents focus on teaching me about responsibility. I’m given a list on responsibilities, such as doing household chores, looking after my grandparents… And my parents make sure that I fulfill all of them. If I fail, I get punished. But if I do them well, I get a reward. This keeps me motivated.<br>
+            MC: Your parents seem strict, but also very fair. What about you, Minh?<br>
+            Minh: My parents set some limits and establish rigid rules about important issues. I have to do chores and follow a set routine. But I can make my own choices about personal things such as clothes, books or toys. My parents encourage me to consider all options before making my own decisions.<br>
+            MC: Yes, setting limits can teach you self-discipline, and keep you safe and healthy. It’s also great that your parents teach you decision-making skills. I hope that one day you’ll be ready to leave home and live independently. Thank you so much for joining the show.</p>
+        </details>
+
+        <p><strong>Exercise 1: Listen to an international student studying in Viet Nam. He is talking about his experience of pursuing higher education abroad and complete the conversation with ONE words.</strong></p>
+        <div class="question">Mai notices Lan's close friendship with Hoang Minh and praises his (1) <input type="text" placeholder="...">.</div>
+        <div class="answer-key">✅ Key 1: independence</div>
+        
+        <div class="question">Lan describes Hoang Minh as (2) <input type="text" placeholder="...">, reliable, (3) <input type="text" placeholder="...">, and self-reliant, citing examples of his academic achievements and problem-solving skills.</div>
+        <div class="answer-key">✅ Key 2: responsible &nbsp;|&nbsp; ✅ Key 3: determined</div>
+        
+        <div class="question">They discuss Hoang Minh's helpfulness at home and his knowledge about global events. Mai expresses interest in meeting Hoang Minh, impressed by his (4) <input type="text" placeholder="..."> and (5) <input type="text" placeholder="...">.</div>
+        <div class="answer-key">✅ Key 4: confidence &nbsp;|&nbsp; ✅ Key 5: decisiveness</div>
+
+        <p><strong>Exercise 2: Listen carefully and choose the correct answer A, B, C or D.</strong></p>
+        <div class="question">
+            <p>Question 1. What is the name of the radio show?</p>
+            <div class="options">
+                <label><input type="radio" name="u8q1"> A. Life Skills</label>
+                <label><input type="radio" name="u8q1"> B. Teen Talk</label>
+                <label><input type="radio" name="u8q1"> C. Parenting Tips</label>
+                <label><input type="radio" name="u8q1"> D. Independent Living</label>
+            </div>
+            <div class="answer-key">✅ Key: A</div>
+        </div>
+        <div class="question">
+            <p>Question 2. How many children does Long have in his family?</p>
+            <div class="options">
+                <label><input type="radio" name="u8q2"> A. Three</label>
+                <label><input type="radio" name="u8q2"> B. Two</label>
+                <label><input type="radio" name="u8q2"> C. One</label>
+                <label><input type="radio" name="u8q2"> D. None</label>
+            </div>
+            <div class="answer-key">✅ Key: C</div>
+        </div>
+        <div class="question">
+            <p>Question 3. What does Tuan's parents do to teach him about responsibility?</p>
+            <div class="options">
+                <label><input type="radio" name="u8q3"> A. They encourage him to consider all options before making his own decisions.</label>
+                <label><input type="radio" name="u8q3"> B. They ask for his opinion before making important family decisions.</label>
+                <label><input type="radio" name="u8q3"> C. They set some limits and establish rigid rules about important issues.</label>
+                <label><input type="radio" name="u8q3"> D. They give him a list of responsibilities and reward or punish him accordingly.</label>
+            </div>
+            <div class="answer-key">✅ Key: D</div>
+        </div>
+        <div class="question">
+            <p>Question 4. What kind of personal things can Minh make his own choices about?</p>
+            <div class="options">
+                <label><input type="radio" name="u8q4"> A. Clothes, books or toys</label>
+                <label><input type="radio" name="u8q4"> B. Household chores, schoolwork or hobbies</label>
+                <label><input type="radio" name="u8q4"> C. Friends, teachers or relatives</label>
+                <label><input type="radio" name="u8q4"> D. Food, drinks or snacks</label>
+            </div>
+            <div class="answer-key">✅ Key: A</div>
+        </div>
+        <div class="question">
+            <p>Question 5. What skill does the MC hope that the students will be ready to do one day?</p>
+            <div class="options">
+                <label><input type="radio" name="u8q5"> A. Voice their opinions</label>
+                <label><input type="radio" name="u8q5"> B. Fulfill their responsibilities</label>
+                <label><input type="radio" name="u8q5"> C. Make their own decisions</label>
+                <label><input type="radio" name="u8q5"> D. Live independently</label>
+            </div>
+            <div class="answer-key">✅ Key: D</div>
+        </div>
+
+        <h3>II. VOCABULARY AND GRAMMAR 📚</h3>
+        <p><strong>Choose the best option to complete each sentence. Circle A, B, C or D.</strong></p>
+        <div class="question">
+            <p>Question 6. Despite my parents' disagreement, I'm __ to drop out of university and establish my own business.</p>
+            <div class="options">
+                <label><input type="radio" name="u8q6"> A. determined</label>
+                <label><input type="radio" name="u8q6"> B. confident</label>
+                <label><input type="radio" name="u8q6"> C. successful</label>
+                <label><input type="radio" name="u8q6"> D. energetic</label>
+            </div>
+            <div class="answer-key">✅ Key: A</div>
+        </div>
+        <div class="question">
+            <p>Question 7. The government must take ________ action against environmental pollution.</p>
+            <div class="options">
+                <label><input type="radio" name="u8q7"> A. important</label>
+                <label><input type="radio" name="u8q7"> B. unstable</label>
+                <label><input type="radio" name="u8q7"> C. decisive</label>
+                <label><input type="radio" name="u8q7"> D. indispensable</label>
+            </div>
+            <div class="answer-key">✅ Key: C</div>
+        </div>
+        <div class="question">
+            <p>Question 8. Our enterprise is seeking for candidates _________ and hard-working.</p>
+            <div class="options">
+                <label><input type="radio" name="u8q8"> A. whom are reliant</label>
+                <label><input type="radio" name="u8q8"> B. which are satisfactory</label>
+                <label><input type="radio" name="u8q8"> C. whose are unreliable</label>
+                <label><input type="radio" name="u8q8"> D. who are reliable</label>
+            </div>
+            <div class="answer-key">✅ Key: D</div>
+        </div>
+        <div class="question">
+            <p>Question 9. _______communication skill plays an important role in career success.</p>
+            <div class="options">
+                <label><input type="radio" name="u8q9"> A. Personal</label>
+                <label><input type="radio" name="u8q9"> B. Individual</label>
+                <label><input type="radio" name="u8q9"> C. Interpersonal</label>
+                <label><input type="radio" name="u8q9"> D. Interactive</label>
+            </div>
+            <div class="answer-key">✅ Key: C</div>
+        </div>
+        <div class="question">
+            <p>Question 10. ___________ my wife gave to me at my last birthday party.</p>
+            <div class="options">
+                <label><input type="radio" name="u8q10"> A. It was this T-shirt that</label>
+                <label><input type="radio" name="u8q10"> B. It is this T-shirt which</label>
+                <label><input type="radio" name="u8q10"> C. It was this T-shirt who</label>
+                <label><input type="radio" name="u8q10"> D. It was this T-shirt whom</label>
+            </div>
+            <div class="answer-key">✅ Key: A</div>
+        </div>
+
+        <h3>III. READING 📖</h3>
+        <p><strong>Read the following passage and mark the letter A, B, C, or D to indicate the correct word or phrase that best fits each of the numbered blanks.</strong></p>
+        <div class="passage">
+            <strong>Learning The Basics of Essential Life Skills</strong><br>
+            Living on your own might be something that you dream of achieving some day, but at the same time, the thought can be scary. You need an income, and then after that you need the survival skills to take care of yourself (11)_________. This guide will help prepare you for that transition so that some day you can live independently.<br><br>
+            First, create a support network. We need people to be there for us and to also be honest with us and tell us how we can improve ourselves. Preferably, this network will extend beyond family members and include at least one close friend that you trust. Ultimately, when you are living on your own, you might encounter many obstacles you (12)…………………and you will want someone there to be supportive of you and to help you as you navigate a life of independence.<br><br>
+            Second, master your weaknesses. It is a good idea to try and be aware of your weaknesses. If possible, have your close friend tell you what they feel are your biggest weaknesses. It Is (13)…………………., but it is your weaknesses that you need to work on. So, it is important that you recognize your weaknesses and do your best to work with them.<br><br>
+            Next, learn to balance your schedule. It is important to learn how to do multiple things in a day. You need to be flexible and willing (14)_______, work, and social engagements. Then, live a healthy lifestyle. You should exercise and try to eat healthy. You also have to maintain your hygiene or you might find yourself out of a job.<br><br>
+            Last but not least, (15)_______them come true.
+        </div>
+        <div class="question">
+            <p>Question 11.</p>
+            <div class="options">
+                <label><input type="radio" name="u8q11"> A. for anyone there to support you</label>
+                <label><input type="radio" name="u8q11"> B. with anyone there to support you</label>
+                <label><input type="radio" name="u8q11"> C. without anyone there to support you</label>
+                <label><input type="radio" name="u8q11"> D. on anyone there to support you</label>
+            </div>
+            <div class="answer-key">✅ Key: C</div>
+        </div>
+        <div class="question">
+            <p>Question 12.</p>
+            <div class="options">
+                <label><input type="radio" name="u8q12"> A. has never thought of</label>
+                <label><input type="radio" name="u8q12"> B. had never thought of</label>
+                <label><input type="radio" name="u8q12"> C. have thought never of</label>
+                <label><input type="radio" name="u8q12"> D. have never thought of</label>
+            </div>
+            <div class="answer-key">✅ Key: D</div>
+        </div>
+        <div class="question">
+            <p>Question 13.</p>
+            <div class="options">
+                <label><input type="radio" name="u8q13"> A. also good to knowing your strengths</label>
+                <label><input type="radio" name="u8q13"> B. also good to know your strengths</label>
+                <label><input type="radio" name="u8q13"> C. also good know your strengths</label>
+                <label><input type="radio" name="u8q13"> D. also good to known your strengths</label>
+            </div>
+            <div class="answer-key">✅ Key: B</div>
+        </div>
+        <div class="question">
+            <p>Question 14.</p>
+            <div class="options">
+                <label><input type="radio" name="u8q14"> A. to schedule time for act</label>
+                <label><input type="radio" name="u8q14"> B. to schedule time for actions</label>
+                <label><input type="radio" name="u8q14"> C. to schedule time for activities</label>
+                <label><input type="radio" name="u8q14"> D. to schedule time for acting</label>
+            </div>
+            <div class="answer-key">✅ Key: C</div>
+        </div>
+        <div class="question">
+            <p>Question 15.</p>
+            <div class="options">
+                <label><input type="radio" name="u8q15"> A. follow your dreams and make</label>
+                <label><input type="radio" name="u8q15"> B. follow your dreams and do</label>
+                <label><input type="radio" name="u8q15"> C. follow your dreams and making</label>
+                <label><input type="radio" name="u8q15"> D. follow your dreams and to do</label>
+            </div>
+            <div class="answer-key">✅ Key: A</div>
+        </div>
+
+        <p><strong>TASK 1: Read the passage and choose the word/ phrase (A, B, C, D) that best fits each of the numbered blanks</strong></p>
+        <div class="passage">
+            <strong>Time Management For Students</strong><br>
+            Learning to manage your time involves using a variety of life skills together. First of all, you need to know yourself. Only you know (16) _________ you are a morning or an evening person, for example. Understanding when you are (17) _________ your best can help you decide when to do certain things you have to do - like studying. Then, you need to prioritise and decide which things are the most (and least) important. After that, you need to get organised and start planning a schedule, (18) _________ could include when to study, as well as when to relax. It is important to be (19) _________ when you are trying to manage your time. You need to factor in time to sleep, (20) __________, and this should be based on your normal sleep patterns there is no point in planning to study at six in the morning if you have never managed to get out of bed before eight.
+        </div>
+        <div class="question">
+            <p>Question 16.</p>
+            <div class="options">
+                <label><input type="radio" name="u8q16"> A. that</label>
+                <label><input type="radio" name="u8q16"> B. whether</label>
+                <label><input type="radio" name="u8q16"> C. what</label>
+                <label><input type="radio" name="u8q16"> D. how</label>
+            </div>
+            <div class="answer-key">✅ Key: B</div>
+        </div>
+        <div class="question">
+            <p>Question 17.</p>
+            <div class="options">
+                <label><input type="radio" name="u8q17"> A. in</label>
+                <label><input type="radio" name="u8q17"> B. on</label>
+                <label><input type="radio" name="u8q17"> C. at</label>
+                <label><input type="radio" name="u8q17"> D. over</label>
+            </div>
+            <div class="answer-key">✅ Key: C</div>
+        </div>
+        <div class="question">
+            <p>Question 18.</p>
+            <div class="options">
+                <label><input type="radio" name="u8q18"> A. that</label>
+                <label><input type="radio" name="u8q18"> B. which</label>
+                <label><input type="radio" name="u8q18"> C. it</label>
+                <label><input type="radio" name="u8q18"> D. there</label>
+            </div>
+            <div class="answer-key">✅ Key: B</div>
+        </div>
+        <div class="question">
+            <p>Question 19.</p>
+            <div class="options">
+                <label><input type="radio" name="u8q19"> A. real</label>
+                <label><input type="radio" name="u8q19"> B. realism</label>
+                <label><input type="radio" name="u8q19"> C. reality</label>
+                <label><input type="radio" name="u8q19"> D. realistic</label>
+            </div>
+            <div class="answer-key">✅ Key: D</div>
+        </div>
+        <div class="question">
+            <p>Question 20.</p>
+            <div class="options">
+                <label><input type="radio" name="u8q20"> A. in contrast</label>
+                <label><input type="radio" name="u8q20"> B. in addition</label>
+                <label><input type="radio" name="u8q20"> C. for all</label>
+                <label><input type="radio" name="u8q20"> D. for instance</label>
+            </div>
+            <div class="answer-key">✅ Key: D</div>
+        </div>
+
+        <p><strong>Read the following passage and mark the letter A, B, C, or D to indicate the correct answer to each of the questions.</strong></p>
+        <div class="passage">
+            <strong>ARE TRADITIONAL WAYS OF LEARNING THE BEST?</strong><br>
+            One school in Hampshire, UK, offers 24-hour teaching. The children can decide when or if they come to school. The school is open from 7 a.m. to 10 p.m., for 364 days a year and provides online teaching throughout the night. The idea is that pupils don't have to come to school and they can decide when they want to study. Cheryl Heron, the head teacher, said “Some students learn better at night. Some students learn better in the morning.” Cheryl believes that if children are bored, they will not come to school. “Why must teaching only be conducted in a classroom? You can teach a child without him ever coming to school.”<br><br>
+            Steiner schools encourage creativity and free thinking so children can study art, music and gardening as well as science and history. They don’t have to learn to read and write at an early age. At some Steiner schools the teachers can’t use textbooks. They talk to the children, who learn by listening. Every morning the children have to go to special music and movement classes called “eurhythmy”, which help them learn to concentrate. Very young children learn foreign languages through music and song. Another difference from traditional schools is that at Steiner schools you don't have to do any tests or exams.<br><br>
+            A child learning music with the Suzuki method has to start as young as possible. Even two-year-old children can learn to play difficult pieces of classical music, often on the violin. They do this by watching and listening. They learn by copying, just like they learn their mother tongue. The child has to join in, but doesn't have to get it right. “They soon learn that they mustn't stop every time they make a mistake. They just carry on,” said one Suzuki trainer. The children have to practise for hours every day and they give performances once a week, so they learn quickly. “The parents must be involved too,” said the trainer, “or it just doesn't work.”
+        </div>
+        <div class="question">
+            <p>Question 21. Which of the following is NOT true about 24-hour teaching?</p>
+            <div class="options">
+                <label><input type="radio" name="u8q21"> A. Students can come to school from 7 a.m. to 10 p.m.</label>
+                <label><input type="radio" name="u8q21"> B. Students can study online at night.</label>
+                <label><input type="radio" name="u8q21"> C. Students can choose the time to study.</label>
+                <label><input type="radio" name="u8q21"> D. Some students need to study in the morning and some need to study at night.</label>
+            </div>
+            <div class="answer-key">✅ Key: A</div>
+        </div>
+        <div class="question">
+            <p>Question 22. According to Cheryl Heron, teaching _______.</p>
+            <div class="options">
+                <label><input type="radio" name="u8q22"> A. should happen throughout the night</label>
+                <label><input type="radio" name="u8q22"> B. is not necessarily carried out in class</label>
+                <label><input type="radio" name="u8q22"> C. is for children who will not come to school</label>
+                <label><input type="radio" name="u8q22"> D. must be around the year</label>
+            </div>
+            <div class="answer-key">✅ Key: B</div>
+        </div>
+        <div class="question">
+            <p>Question 23. Which of the following is the most suitable title for the third paragraph?</p>
+            <div class="options">
+                <label><input type="radio" name="u8q23"> A. Traditional ways of teaching</label>
+                <label><input type="radio" name="u8q23"> B. 24-hour teaching</label>
+                <label><input type="radio" name="u8q23"> C. Learn by listening</label>
+                <label><input type="radio" name="u8q23"> D. Starting young</label>
+            </div>
+            <div class="answer-key">✅ Key: D</div>
+        </div>
+        <div class="question">
+            <p>Question 24. The word “this” in paragraph 3 refers to _______.</p>
+            <div class="options">
+                <label><input type="radio" name="u8q24"> A. starting as young as possible</label>
+                <label><input type="radio" name="u8q24"> B. the violin</label>
+                <label><input type="radio" name="u8q24"> C. playing difficult pieces of music</label>
+                <label><input type="radio" name="u8q24"> D. learning their mother tongue</label>
+            </div>
+            <div class="answer-key">✅ Key: C</div>
+        </div>
+        <div class="question">
+            <p>Question 25. The word “involved” in paragraph 3 is closest in meaning to _______.</p>
+            <div class="options">
+                <label><input type="radio" name="u8q25"> A. engaged</label>
+                <label><input type="radio" name="u8q25"> B. encouraging</label>
+                <label><input type="radio" name="u8q25"> C. accepting</label>
+                <label><input type="radio" name="u8q25"> D. rejecting</label>
+            </div>
+            <div class="answer-key">✅ Key: A</div>
+        </div>
+
+        <h3>IV. WRITING ✍️</h3>
+        <p><strong>TASK 1. Mark the letter A, B, C, or D to indicate the correct arrangement of the sentences to make a meaningful paragraph.</strong></p>
+        <div class="question">
+            <p>Question 26:<br>
+            A.: No problem at all. Just do your best and everything will work out.<br>
+            B.: Thank you! I really appreciate your support.<br>
+            C.: Don't worry, you got this! I know you've been studying hard and you're well-prepared. Good luck!<br>
+            D.: Hi, I'm a bit nervous about the upcoming exam.</p>
+            <div class="options">
+                <label><input type="radio" name="u8q26"> A. a-b-c-d</label>
+                <label><input type="radio" name="u8q26"> B. d-c-b-a</label>
+                <label><input type="radio" name="u8q26"> C. b-c-d-a</label>
+                <label><input type="radio" name="u8q26"> D. c-d-b-a</label>
+            </div>
+            <div class="answer-key">✅ Key: B (d-c-b-a)</div>
+        </div>
+        <div class="question">
+            <p>Question 27:<br>
+            A. Hang or fold, and store your own clothes<br>
+            B. Sort the clothes by colour<br>
+            C. Remove the wet clothes from the washing machine and dry them<br>
+            D. Add the washing powder or liquid<br>
+            E. Load the washing machine and turn it on</p>
+            <div class="options">
+                <label><input type="radio" name="u8q27"> A. b-d-e-c-a</label>
+                <label><input type="radio" name="u8q27"> B. a-b-c-d-e</label>
+                <label><input type="radio" name="u8q27"> C. b-c-d-e-a</label>
+                <label><input type="radio" name="u8q27"> D. c-d-e-a-b</label>
+            </div>
+            <div class="answer-key">✅ Key: A (b-d-e-c-a)</div>
+        </div>
+
+        <p><strong>Part 1: Rewrite these sentences with the same meaning and using the cleft sentences with underlined word:</strong></p>
+        <div class="question">
+            <p>Question 28. <ins>My father</ins> usually complains about my students whenever they go to my house.</p>
+            <textarea rows="2" placeholder="Write your answer..."></textarea>
+            <div class="answer-key">✅ Key: It is my father that/who usually complains about my students whenever they go to my house.</div>
+        </div>
+        <div class="question">
+            <p>Question 29. You gave her a bunch of rose <ins>last week</ins>.</p>
+            <textarea rows="2" placeholder="Write your answer..."></textarea>
+            <div class="answer-key">✅ Key: It was last week that you gave her a bunch of rose.</div>
+        </div>
+        <div class="question">
+            <p>Question 30. Sara started <ins>her new job</ins> last Monday. (Passive voice in cleft sentence)</p>
+            <textarea rows="2" placeholder="It was..."></textarea>
+            <div class="answer-key">✅ Key: It was Sara’s new job that was started last Monday.</div>
+        </div>
+        <div class="question">
+            <p>Question 31. Martin’s fans gave <ins>him</ins> a lot of flowers and presents. (Passive voice in cleft sentence)</p>
+            <textarea rows="2" placeholder="It was Martin..."></textarea>
+            <div class="answer-key">✅ Key: It was Martin who/that was given a lot of flowers and presents by his fans</div>
+        </div>
+
+    </div>
+
+    <div id="unit9" class="unit-content">
+        <h2>UNIT 9. SOCIAL ISSUES 💬</h2>
+        
+        <h3>I. LISTENING 🎧</h3>
+        <details>
+            <summary>Xem Transcript (Audio Script) 👀</summary>
+            <p><strong>Script 1:</strong><br>
+            Peer pressure can have both positive and negative effects. It can greatly impact students’ lives. Firstly, positive peer pressure can lead to many benefits for students such as encouraging good behaviours and promoting healthy habits. This is because students are often influenced by their peers and want to fit in with them; for instance, if a student’s group of friends are all high achievers, the student is more likely to be motivated to do well, or if a student’s friend eats healthily, he is more likely to have this habit.<br>
+            Another positive effect of peer pressure is socialization. Students who are pressured to participate in group activities often enjoy socialising with their peers and building friendships. This is an important aspect of personal development and can help students build a network of friends who support them through difficult times.<br>
+            In contrast, negative peer pressure can have serious consequences and can impact a student’s life in many ways. One example of negative peer pressure is bullying. When a group of peers bully another student, the victim can suffer from serious emotional and mental issues such as anxiety and depression. Additionally, the victim may also experience difficulty concentrating on his studies as he is constantly worried about his safety.<br>
+            Another example of negative peer pressure is when a student feels pressured to engage in risky behaviors such as drinking alcohol and smoking. Even if the student is aware of the risks, the fear of not fitting in or appearing unpopular may lead him to make decisions which can be harmful or dangerous.</p>
+            <hr style="border: 1px dashed #a1c4fd; margin: 15px 0;">
+            <p><strong>Script 2:</strong><br>
+            Meet Amber. Amber used to love school, but then she hated going because she felt like there was no one she could trust. When other students made fun of her for wearing the same clothes, her “friends” did not stand up for her and even joined in! Sometimes people called Amber fat and it really hurt her feelings, but she was too embarrassed to tell anyone. The bullying continued daily. Amber started being alone more and stopped talking in class. Thankfully, Amber’s favourite teacher noticed, and got her to open up so the bullying could be dealt with.<br>
+            You may have heard the saying “sticks and stones may break my bones, but words can never hurt me.” This is not true. What people say and do to you can have lasting effects on how you feel about yourself and others. You deserve to feel safe and happy at school. If you witness bullying, you can help make it stop. Don’t keep quiet! Reach out to the person being bullied by letting him know that you saw what happened. Tell an adult, or, if you feel safe to do so, tell the bully to stop. If everyone works together, we can put an end to bullying.</p>
+        </details>
+
+        <p><strong>Task 1. Listen to a talk about peer pressure and complete the table with NO MORE THAN 2 words.</strong></p>
+        <table>
+            <tr>
+                <th>POSITIVE PEER PRESSURE</th>
+                <th>NEGATIVE PEER PRESSURE</th>
+            </tr>
+            <tr>
+                <td>Good behaviors and healthy habits<br>- Students are (1) <input type="text" placeholder="..."> to do well as friends are high achievers.<br>- Students eat healthily as their friends do so.</td>
+                <td>Bullying<br>- Victims can suffer from mental issues such as (4) <input type="text" placeholder="..."> and depression<br>- Victims find it hard to concentrate on their studies.</td>
+            </tr>
+            <tr>
+                <td>(2) <input type="text" placeholder="..."><br>Building a network of friends and encouraging (3) <input type="text" placeholder="...">.</td>
+                <td>Risky behaviors<br>Drinking alcohol and smoking for fear of not fitting in and appearing (5) <input type="text" placeholder="...">.</td>
+            </tr>
+        </table>
+        <div class="answer-key">✅ Key 1: motivated | ✅ Key 2: socialization | ✅ Key 3: personal development | ✅ Key 4: anxiety | ✅ Key 5: unpopular</div>
+
+        <p><strong>Task 2. Listen to the recording and choose TRUE or FALSE.</strong></p>
+        <div class="question">
+            <p>Question 6: Amber didn't want to go to school anymore because she was bullied and had no one to trust.</p>
+            <div class="options">
+                <label><input type="radio" name="u9q6"> A. True</label>
+                <label><input type="radio" name="u9q6"> B. False</label>
+            </div>
+            <div class="answer-key">✅ Key: True</div>
+        </div>
+        <div class="question">
+            <p>Question 7: When Amber was teased about her clothes, her friends defended her.</p>
+            <div class="options">
+                <label><input type="radio" name="u9q7"> A. True</label>
+                <label><input type="radio" name="u9q7"> B. False</label>
+            </div>
+            <div class="answer-key">✅ Key: False</div>
+        </div>
+        <div class="question">
+            <p>Question 8: Amber started isolating herself and spoke less when she was bullied.</p>
+            <div class="options">
+                <label><input type="radio" name="u9q8"> A. True</label>
+                <label><input type="radio" name="u9q8"> B. False</label>
+            </div>
+            <div class="answer-key">✅ Key: True</div>
+        </div>
+        <div class="question">
+            <p>Question 9: A stranger helped Amber open up about her problem.</p>
+            <div class="options">
+                <label><input type="radio" name="u9q9"> A. True</label>
+                <label><input type="radio" name="u9q9"> B. False</label>
+            </div>
+            <div class="answer-key">✅ Key: False (Her favourite teacher did)</div>
+        </div>
+        <div class="question">
+            <p>Question 10: According to the passage, if you witness someone being bullied, you should stay silent and avoid the situation.</p>
+            <div class="options">
+                <label><input type="radio" name="u9q10"> A. True</label>
+                <label><input type="radio" name="u9q10"> B. False</label>
+            </div>
+            <div class="answer-key">✅ Key: False</div>
+        </div>
+
+        <h3>II. LANGUAGE 🗣️</h3>
+        <p><strong>Task 1: Read the following passage and mark the letter A, B, C, or D to indicate the correct option that best fits each of the numbered blanks.</strong></p>
+        <div class="passage">
+            Sometimes, (11)….., the stresses in your life can actually come from your peers. They may pressure you (12) …..doing something you’re uncomfortable with, such as drinking or smoking. The pressure to conform to do what others are doing can be powerful and hard (13)…. . A person might feel pressure to do something just because others are doing it. Peer pressure can influence a person to do something that is relatively harmless or something that has more serious consequences. (14) …..in to the pressure to dress (15) ……certain way is one thing - going along with the crowd to drink or smoke is another.
+        </div>
+        <div class="question">
+            <p>Question 11:</p>
+            <div class="options">
+                <label><input type="radio" name="u9q11"> A. therefore</label>
+                <label><input type="radio" name="u9q11"> B. though</label>
+                <label><input type="radio" name="u9q11"> C. neither</label>
+                <label><input type="radio" name="u9q11"> D. as</label>
+            </div>
+            <div class="answer-key">✅ Key: B</div>
+        </div>
+        <div class="question">
+            <p>Question 12:</p>
+            <div class="options">
+                <label><input type="radio" name="u9q12"> A. on</label>
+                <label><input type="radio" name="u9q12"> B. of</label>
+                <label><input type="radio" name="u9q12"> C. into</label>
+                <label><input type="radio" name="u9q12"> D. through</label>
+            </div>
+            <div class="answer-key">✅ Key: C</div>
+        </div>
+        <div class="question">
+            <p>Question 13:</p>
+            <div class="options">
+                <label><input type="radio" name="u9q13"> A. to resist</label>
+                <label><input type="radio" name="u9q13"> B. resist</label>
+                <label><input type="radio" name="u9q13"> C. resisting</label>
+                <label><input type="radio" name="u9q13"> D. being resisted</label>
+            </div>
+            <div class="answer-key">✅ Key: A</div>
+        </div>
+        <div class="question">
+            <p>Question 14:</p>
+            <div class="options">
+                <label><input type="radio" name="u9q14"> A. given</label>
+                <label><input type="radio" name="u9q14"> B. give</label>
+                <label><input type="radio" name="u9q14"> C. gave</label>
+                <label><input type="radio" name="u9q14"> D. giving</label>
+            </div>
+            <div class="answer-key">✅ Key: D</div>
+        </div>
+        <div class="question">
+            <p>Question 15:</p>
+            <div class="options">
+                <label><input type="radio" name="u9q15"> A. the</label>
+                <label><input type="radio" name="u9q15"> B. each</label>
+                <label><input type="radio" name="u9q15"> C. a</label>
+                <label><input type="radio" name="u9q15"> D. Ø</label>
+            </div>
+            <div class="answer-key">✅ Key: C</div>
+        </div>
+
+        <p><strong>Task 2: VOCABULARY AND GRAMMAR</strong></p>
+        <div class="question">
+            <p>Question 16: Bullying is considered a __________ in many places and can lead to legal consequences.</p>
+            <div class="options">
+                <label><input type="radio" name="u9q16"> A. poverty</label>
+                <label><input type="radio" name="u9q16"> B. crime</label>
+                <label><input type="radio" name="u9q16"> C. anxiety</label>
+                <label><input type="radio" name="u9q16"> D. campaign</label>
+            </div>
+            <div class="answer-key">✅ Key: B</div>
+        </div>
+        <div class="question">
+            <p>Question 17: Students should be encouraged to speak out against __________ when they see it happening.</p>
+            <div class="options">
+                <label><input type="radio" name="u9q17"> A. social group</label>
+                <label><input type="radio" name="u9q17"> B. presentation skill</label>
+                <label><input type="radio" name="u9q17"> C. school performance</label>
+                <label><input type="radio" name="u9q17"> D. body shaming</label>
+            </div>
+            <div class="answer-key">✅ Key: D</div>
+        </div>
+        <div class="question">
+            <p>Question 18: Peer pressure can encourage students to study harder. _________, it leads to better school performance.</p>
+            <div class="options">
+                <label><input type="radio" name="u9q18"> A. In addition</label>
+                <label><input type="radio" name="u9q18"> B. Therefore</label>
+                <label><input type="radio" name="u9q18"> C. Despite</label>
+                <label><input type="radio" name="u9q18"> D. Since</label>
+            </div>
+            <div class="answer-key">✅ Key: B</div>
+        </div>
+        <div class="question">
+            <p>Question 19: _________ some students are living in poverty; they are still very positive about the future.</p>
+            <div class="options">
+                <label><input type="radio" name="u9q19"> A. As</label>
+                <label><input type="radio" name="u9q19"> B. Besides</label>
+                <label><input type="radio" name="u9q19"> C. Moreover</label>
+                <label><input type="radio" name="u9q19"> D. Although</label>
+            </div>
+            <div class="answer-key">✅ Key: D</div>
+        </div>
+        <div class="question">
+            <p>Question 20: _________ the negative impact on students’ mental health, cyberbullying can also affect their academic performance.</p>
+            <div class="options">
+                <label><input type="radio" name="u9q20"> A. As a result</label>
+                <label><input type="radio" name="u9q20"> B. In spite of</label>
+                <label><input type="radio" name="u9q20"> C. Besides</label>
+                <label><input type="radio" name="u9q20"> D. Because of</label>
+            </div>
+            <div class="answer-key">✅ Key: C</div>
+        </div>
+
+        <h3>III. READING 📖</h3>
+        <p><strong>Task 1: Mark the letter A, B, C, or D to indicate the correct option that best fits each of the numbered blanks.</strong></p>
+        <div class="passage">
+            Peers affect each other just by spending time together. You learn from them, and they learn from you. It’s natural to listen to and learn from other people your age. Peers can have a(n) (21) …….on you in many ways. For example, you might see what teens in your class are wearing, like it, and wear something like that, too. This kind of (22) …..works both ways. Your peers might watch what you do and start doing it, too. Peers can influence each other in positive ways. Maybe a teen in your science class taught you an easy way to remember the planets in the solar system. Maybe you admire a friend who has a (23) …..attitude in sports, and you try (24) ……more like them. Maybe you got others excited about your new favourite book, and now everyone is reading it. However, peers can also influence each other in negative ways. They might try to pressure you into (25) ……something you know is wrong. For example, what if a few teens in school try to get you to skip class with them? What if your soccer teammate tries to convince you to be mean to another player and never pass them the ball? What if a kid in the neighbourhood wants you to drink alcohol with them?
+        </div>
+        <div class="question">
+            <p>Question 21:</p>
+            <div class="options">
+                <label><input type="radio" name="u9q21"> A. control</label>
+                <label><input type="radio" name="u9q21"> B. influence</label>
+                <label><input type="radio" name="u9q21"> C. pressure</label>
+                <label><input type="radio" name="u9q21"> D. change</label>
+            </div>
+            <div class="answer-key">✅ Key: B</div>
+        </div>
+        <div class="question">
+            <p>Question 22:</p>
+            <div class="options">
+                <label><input type="radio" name="u9q22"> A. peer pressure</label>
+                <label><input type="radio" name="u9q22"> B. positive impact</label>
+                <label><input type="radio" name="u9q22"> C. social trend</label>
+                <label><input type="radio" name="u9q22"> D. mutual effect</label>
+            </div>
+            <div class="answer-key">✅ Key: D</div>
+        </div>
+        <div class="question">
+            <p>Question 23:</p>
+            <div class="options">
+                <label><input type="radio" name="u9q23"> A. friendly</label>
+                <label><input type="radio" name="u9q23"> B. good sportsmanship</label>
+                <label><input type="radio" name="u9q23"> C. positive behavior</label>
+                <label><input type="radio" name="u9q23"> D. strong performance</label>
+            </div>
+            <div class="answer-key">✅ Key: B</div>
+        </div>
+        <div class="question">
+            <p>Question 24:</p>
+            <div class="options">
+                <label><input type="radio" name="u9q24"> A. being</label>
+                <label><input type="radio" name="u9q24"> B. become</label>
+                <label><input type="radio" name="u9q24"> C. to be</label>
+                <label><input type="radio" name="u9q24"> D. behaving</label>
+            </div>
+            <div class="answer-key">✅ Key: C</div>
+        </div>
+        <div class="question">
+            <p>Question 25:</p>
+            <div class="options">
+                <label><input type="radio" name="u9q25"> A. trying</label>
+                <label><input type="radio" name="u9q25"> B. doing</label>
+                <label><input type="radio" name="u9q25"> C. taking</label>
+                <label><input type="radio" name="u9q25"> D. making</label>
+            </div>
+            <div class="answer-key">✅ Key: B</div>
+        </div>
+
+        <p><strong>Task 2: Read the following passage and mark the letter A, B, C, or D to indicate the correct answer to each of the questions.</strong></p>
+        <div class="passage">
+            Bullying leads to a decrease in academic performance. A study by CDC researchers showed that 12.9% of teenagers who missed school due to safety concerns feared bullying. Victims of bullying may also avoid participating in class for fear of drawing attention to themselves and getting bullied. They may then become labelled as low achievers, putting them at an even higher risk of being targeted by bullies.<br><br>
+            Like all forms of bullying, physical bullying can cause emotional change. It makes the victims feel unconfident and think less of themselves. This leads to feelings of shame, isolation, and despair. Moreover, the child may lose interest in playing or activities they previously enjoyed and engage in harmful behaviour, such as self-harm. These actions lead to more negative feelings and thoughts, creating a self-destructive cycle.<br><br>
+            In victims with existing depression and anxiety, bullying can make these conditions worse. Besides the physical injuries, victims may get from the attacks, they may also develop health issues, such as somatization. Somatization includes physical symptoms caused by psychological or emotional factors. For instance, the child may complain about headaches, body pain, or tiredness.
+        </div>
+        <div class="question">
+            <p>Question 26: What is the main idea of this passage?</p>
+            <div class="options">
+                <label><input type="radio" name="u9q26"> A. The appearance of physical bullying among teenagers</label>
+                <label><input type="radio" name="u9q26"> B. The emotional and health effects of physical bullying on victims</label>
+                <label><input type="radio" name="u9q26"> C. The positive effects of bullying on academic performance</label>
+                <label><input type="radio" name="u9q26"> D. The strategies to prevent bullying in schools</label>
+            </div>
+            <div class="answer-key">✅ Key: B</div>
+        </div>
+        <div class="question">
+            <p>Question 27: The word “they” in paragraph 2 refers to _________.</p>
+            <div class="options">
+                <label><input type="radio" name="u9q27"> A. researchers</label>
+                <label><input type="radio" name="u9q27"> B. achievers</label>
+                <label><input type="radio" name="u9q27"> C. victims</label>
+                <label><input type="radio" name="u9q27"> D. teenagers</label>
+            </div>
+            <div class="answer-key">✅ Key: C</div>
+        </div>
+        <div class="question">
+            <p>Question 28: The word “despair” in paragraph 3 is closest in meaning to _________.</p>
+            <div class="options">
+                <label><input type="radio" name="u9q28"> A. aim</label>
+                <label><input type="radio" name="u9q28"> B. anger</label>
+                <label><input type="radio" name="u9q28"> C. policy</label>
+                <label><input type="radio" name="u9q28"> D. depression</label>
+            </div>
+            <div class="answer-key">✅ Key: D</div>
+        </div>
+        <div class="question">
+            <p>Question 29: What is somatization as mentioned in the passage?</p>
+            <div class="options">
+                <label><input type="radio" name="u9q29"> A. the fear of bullying</label>
+                <label><input type="radio" name="u9q29"> B. physical injuries resulted from bullying</label>
+                <label><input type="radio" name="u9q29"> C. physical symptoms caused by psychological or emotional factors</label>
+                <label><input type="radio" name="u9q29"> D. a type of bullying behaviour</label>
+            </div>
+            <div class="answer-key">✅ Key: C</div>
+        </div>
+        <div class="question">
+            <p>Question 30: Which of the following is NOT true according to the passage?</p>
+            <div class="options">
+                <label><input type="radio" name="u9q30"> A. Victims with existing depression can experience more serious conditions.</label>
+                <label><input type="radio" name="u9q30"> B. Victims avoid participating in class as they do not want to be noticed.</label>
+                <label><input type="radio" name="u9q30"> C. Victims of bullying may lead to health issues like somatization.</label>
+                <label><input type="radio" name="u9q30"> D. Victims of bullying may become labelled as high achievers.</label>
+            </div>
+            <div class="answer-key">✅ Key: D</div>
+        </div>
+
+        <h3>IV. WRITING ✍️</h3>
+        <p><strong>Task 1: Mark the letter A, B, C, or D to indicate the correct arrangement of the sentences to make a meaningful paragraph.</strong></p>
+        <div class="question">
+            <p>Question 31:<br>
+            a. I suggest that we start an anti-bullying club at our school. We can organise awareness campaigns, workshops, and even invite guest speakers to talk about the effects of bullying.<br>
+            b. I’ve thought a lot about something important, and I am writing to share my ideas with you.<br>
+            c. Dear Nam,<br>
+            d. As you know, bullying can be a serious problem at our school. I believe we can make a difference by doing something against it. I can’t stand seeing our friends or other students getting hurt by bullies.<br>
+            e. Take care,<br>
+            f. What do you think about this idea? I believe if we work together, we can make our school a better place for everyone. Let me know your opinions and we can discuss it later.<br>
+            g. Looking forward to hearing from you!</p>
+            <div class="options">
+                <label><input type="radio" name="u9q31"> A. c-b-d-a-f-g-e</label>
+                <label><input type="radio" name="u9q31"> B. b-a-c-d-e-f-g</label>
+                <label><input type="radio" name="u9q31"> C. a-b-c-e-d-f-g</label>
+                <label><input type="radio" name="u9q31"> D. d-a-b-c-e-f-g</label>
+            </div>
+            <div class="answer-key">✅ Key: A (c-b-d-a-f-g-e)</div>
+        </div>
+        <div class="question">
+            <p>Question 32:<br>
+            a. Next, it enables you to build better relationships with people because through frequent sports you can get to know a lot about others' personalities.<br>
+            b. First, playing sports helps reduce the stress and gives you more energy in your life.<br>
+            c. In short, people should play sports regularly because it brings lots of advantages.<br>
+            d. Lastly, it improves your health. When playing sports, the body is protected from different types of harmful bacteria and viruses.<br>
+            e. Playing sports brings a lot of advantages.</p>
+            <div class="options">
+                <label><input type="radio" name="u9q32"> A. e-a-b-d-c</label>
+                <label><input type="radio" name="u9q32"> B. e-b-a-d-c</label>
+                <label><input type="radio" name="u9q32"> C. b-a-d-c-e</label>
+                <label><input type="radio" name="u9q32"> D. c-b-a-e-d</label>
+            </div>
+            <div class="answer-key">✅ Key: B (e-b-a-d-c)</div>
+        </div>
+
+        <p><strong>Task 2. Rewrite each sentence using the given word in brackets as long as its meaning stays the same as the original one.</strong></p>
+        <div class="question">
+            <p>Question 1: Although we faced many difficulties, we successfully ran an anti-bullying campaign. (SPITE)</p>
+            <textarea rows="2">We </textarea>
+            <div class="answer-key">✅ Key: We successfully ran an anti-bullying campaign in spite of many difficulties.</div>
+        </div>
+        <div class="question">
+            <p>Question 2: As bullying is a pressing issue at school, it needs immediate action. (BECAUSE OF)</p>
+            <textarea rows="2">Bullying </textarea>
+            <div class="answer-key">✅ Key: Bullying needs immediate action because of being a pressing issue at school.</div>
+        </div>
+        <div class="question">
+            <p>Question 3: Minh asked Hung to skip class to go to the park but Hung did not agree. (HOWEVER)</p>
+            <textarea rows="2">Minh </textarea>
+            <div class="answer-key">✅ Key: Minh asked Hung to skip class to go to the park; however, Hung did not agree.</div>
+        </div>
+        <div class="question">
+            <p>Question 4: Body shaming not only creates a negative environment for students but also affects their self-confidence. (BESIDES)</p>
+            <textarea rows="2">Body </textarea>
+            <div class="answer-key">✅ Key: Body shaming creates a negative environment for students; besides, it affects their self-confidence.</div>
+        </div>
+
+    </div>
+
+    <div id="unit10" class="unit-content">
+        <h2>UNIT 10. THE ECOSYSTEM 🌍</h2>
+        
+        <h3>I. LISTENING 🎧</h3>
+        <details>
+            <summary>Xem Transcript (Audio Script) 👀</summary>
+            <p><strong>Script 1:</strong><br>
+            We are using 1.6 Earths to give us what we need to live, eat and grow our economies. We are polluting nature’s resources, treating it as a dumping ground for plastic and waste. If we don’t act now, we could lose one million species in the next few decades. Like we would lose our coral reefs, which will impact fish first, then fishers, then entire economies.<br>
+            But it doesn’t have to be this way. What if I told you, there’s a solution? It’s called ecosystem restoration. Healthy ecosystems regulate our drinking water and carbon. All living things need carbon. Trees store carbon. Even the human body is 18% carbon. But as ecosystems become weak, they release carbon instead of storing it.<br>
+            Look at the soil below your feet. Healthy soil grows 95 of our food. But pollution, climate change, and pesticides are making soil less productive. And when the yields go down, instead of restoring, we expand till more land turning wild places into farmland and pollute healthy soil. When we lose forests, wildlife is forced to come closer to humans, bringing what’s called ‘Zoonotic diseases’ – viruses that are passed between animals and humans like bird flu, Ebola and Covid-19.<br>
+            But there are some actions we can take today. Growing trees in cities would help to cut pollution dramatically. They would filter and cool the air, improving our health and reducing global warming. But trees can do more. Look at mangroves for example. For each dollar we spend on restoring mangroves, we would earn four US dollars as they protect our coastlines from storms and floods.<br>
+            Building economies around nature will create jobs for the future, jobs that you could have! Restoring ecosystems will not be simple and it will not be easy. But together, we can do it. We are calling entrepreneurs, thinkers, leaders in your family, school and workplace to get involved. Can you do your part, too? Join generation restoration.</p>
+            <hr style="border: 1px dashed #a1c4fd; margin: 15px 0;">
+            <p><strong>Script 2:</strong><br>
+            Speaker A: Hey, have you ever thought about how important biodiversity is for our planet?<br>
+            Speaker B: Actually, I haven’t given it much thought. What’s so special about biodiversity?<br>
+            Speaker A: Well, biodiversity refers to the incredible variety of life on Earth, including all organisms, plants, animals, and us humans. It’s basically the source of everything we need to survive.<br>
+            Speaker B: That sounds interesting. But how does it work within an ecosystem?<br>
+            Speaker A: Great question! An ecosystem is like a community of living organisms, all interacting with each other and their environment. For instance, small mammals and birds help trees grow by spreading seeds and fruit.<br>
+            Speaker B: So, why is biodiversity so essential for ecosystems?<br>
+            Speaker A: Biodiversity is crucial to the sustainability of an ecosystem. The more species an ecosystem has, the better it can withstand environmental changes and human impacts. For example, tropical forests can fight against disasters like fires and floods better than less diverse ecosystems.<br>
+            Speaker B: That’s fascinating. What are some of the benefits of biodiversity?<br>
+            Speaker A: Biodiversity provides a wide range of goods and services, such as a stable climate, food, water, raw materials and recreation for our lives. These are often called ‘ecosystem services.’ Businesses also rely on these ecosystem services. For example, forests supply timber and wood fibre.<br>
+            Speaker B: That’s great. Is there anything else?<br>
+            Speaker A: Yes, biodiversity also protects us against natural disasters. Mangrove forests and other coastal ecosystems act as a barrier to reduce loss and damage caused by storms, floods and typhoons.<br>
+            Speaker B: It seems like biodiversity plays a vital role in our lives. How can we contribute to preserving it?<br>
+            Speaker A: We can all make a difference by supporting companies that prioritise biodiversity and policies that protect our planet.<br>
+            Speaker B: That’s right. Let’s do our part to protect biodiversity and ensure a healthier future for us all.</p>
+        </details>
+
+        <p><strong>Task 1: Listen to a talk about ecosystem restoration and fill in each blank with one suitable word.</strong></p>
+        <div class="passage">
+            <strong>Negative effects of harming ecosystems</strong><br>
+            - lose one million (1) <input type="text" placeholder="..."> in the next few decades<br>
+            - lose coral reefs, impacting fish, fishers and economies<br>
+            - weaken ecosystems, making them (2) <input type="text" placeholder="..."> carbon<br>
+            - make soil less (3) <input type="text" placeholder="..."> and pollute healthy soil<br>
+            - lose forests, causing ‘Zoonotic disease’ like bird flu, Ebola and Covid-19<br><br>
+            <strong>Ways for ecosystem restoration</strong><br>
+            - grow trees in cities to cut pollution (4) <input type="text" placeholder="...">, improving our health and reducing global warming<br>
+            - restore mangroves to protect coastlines from storms and floods<br>
+            - build economies around nature to create jobs for the future<br>
+            - call entrepreneurs, thinkers, leaders to get (5) <input type="text" placeholder="...">
+        </div>
+        <div class="answer-key">✅ Key 1: species | ✅ Key 2: release | ✅ Key 3: productive | ✅ Key 4: dramatically | ✅ Key 5: involved</div>
+
+        <p><strong>Task 2. Listen to the recording and choose TRUE or FALSE.</strong></p>
+        <div class="question">
+            <p>Question 6: Biodiversity refers to the incredible variety of life on Earth, including all organisms, plants, animals, and humans.</p>
+            <div class="options">
+                <label><input type="radio" name="u10q6"> A. True</label>
+                <label><input type="radio" name="u10q6"> B. False</label>
+            </div>
+            <div class="answer-key">✅ Key: True</div>
+        </div>
+        <div class="question">
+            <p>Question 7: Small mammals and birds help ecosystems by spreading seeds and fruit, which helps trees grow.</p>
+            <div class="options">
+                <label><input type="radio" name="u10q7"> A. True</label>
+                <label><input type="radio" name="u10q7"> B. False</label>
+            </div>
+            <div class="answer-key">✅ Key: True</div>
+        </div>
+        <div class="question">
+            <p>Question 8: Biodiversity is crucial to the sustainability of an ecosystem.</p>
+            <div class="options">
+                <label><input type="radio" name="u10q8"> A. True</label>
+                <label><input type="radio" name="u10q8"> B. False</label>
+            </div>
+            <div class="answer-key">✅ Key: True</div>
+        </div>
+        <div class="question">
+            <p>Question 9: Biodiversity makes climate change less stable.</p>
+            <div class="options">
+                <label><input type="radio" name="u10q9"> A. True</label>
+                <label><input type="radio" name="u10q9"> B. False</label>
+            </div>
+            <div class="answer-key">✅ Key: False</div>
+        </div>
+        <div class="question">
+            <p>Question 10: We can help protect biodiversity by encouraging policies that protect our planet.</p>
+            <div class="options">
+                <label><input type="radio" name="u10q10"> A. True</label>
+                <label><input type="radio" name="u10q10"> B. False</label>
+            </div>
+            <div class="answer-key">✅ Key: True</div>
+        </div>
+
+        <h3>II. LANGUAGE 🗣️</h3>
+        <p><strong>Task 1: Read the following leaflet and mark the letter A, B, C, or D to indicate the option that best fits each of the numbered blanks.</strong></p>
+        <div class="passage">
+            Our natural resources will be used up unless we save energy (11) ___. Follow these tips to avoid wasting energy:<br>
+            - Use a timer on your air-conditioning system. Just set air conditioning to come only (12) ___.<br>
+            - Close your curtains at dust to stop heat escaping (13) ___ the windows.<br>
+            - Don’t leave the apps on your phones or laptops (14) ___ unnecessarily.<br>
+            - If you have a hot water tank, set the cylinder thermostat to 60ºC (140ºF).<br>
+            - Don’t use your (15) ___ every day. Hang out washing outside during nice weather.
+        </div>
+        <div class="question">
+            <p>Question 11:</p>
+            <div class="options">
+                <label><input type="radio" name="u10q11"> A. which is consuming</label>
+                <label><input type="radio" name="u10q11"> B. we are consumed</label>
+                <label><input type="radio" name="u10q11"> C. which are consumed</label>
+                <label><input type="radio" name="u10q11"> D. we are consuming</label>
+            </div>
+            <div class="answer-key">✅ Key: D</div>
+        </div>
+        <div class="question">
+            <p>Question 12:</p>
+            <div class="options">
+                <label><input type="radio" name="u10q12"> A. when is required</label>
+                <label><input type="radio" name="u10q12"> B. when required</label>
+                <label><input type="radio" name="u10q12"> C. when is requiring</label>
+                <label><input type="radio" name="u10q12"> D. when requiring</label>
+            </div>
+            <div class="answer-key">✅ Key: B</div>
+        </div>
+        <div class="question">
+            <p>Question 13:</p>
+            <div class="options">
+                <label><input type="radio" name="u10q13"> A. from</label>
+                <label><input type="radio" name="u10q13"> B. out</label>
+                <label><input type="radio" name="u10q13"> C. through</label>
+                <label><input type="radio" name="u10q13"> D. though</label>
+            </div>
+            <div class="answer-key">✅ Key: C</div>
+        </div>
+        <div class="question">
+            <p>Question 14:</p>
+            <div class="options">
+                <label><input type="radio" name="u10q14"> A. on standby</label>
+                <label><input type="radio" name="u10q14"> B. at standby</label>
+                <label><input type="radio" name="u10q14"> C. for standby</label>
+                <label><input type="radio" name="u10q14"> D. with standby</label>
+            </div>
+            <div class="answer-key">✅ Key: A</div>
+        </div>
+        <div class="question">
+            <p>Question 15:</p>
+            <div class="options">
+                <label><input type="radio" name="u10q15"> A. washing machine</label>
+                <label><input type="radio" name="u10q15"> B. drying machine</label>
+                <label><input type="radio" name="u10q15"> C. cutting machine</label>
+                <label><input type="radio" name="u10q15"> D. fixing machine</label>
+            </div>
+            <div class="answer-key">✅ Key: B</div>
+        </div>
+
+        <p><strong>Task 2: VOCABULARY AND GRAMMAR</strong></p>
+        <div class="question">
+            <p>Question 16: The _________ of animals in the wild depends on their ability to adapt to environmental changes.</p>
+            <div class="options">
+                <label><input type="radio" name="u10q16"> A. level</label>
+                <label><input type="radio" name="u10q16"> B. survival</label>
+                <label><input type="radio" name="u10q16"> C. hunt</label>
+                <label><input type="radio" name="u10q16"> D. ban</label>
+            </div>
+            <div class="answer-key">✅ Key: B</div>
+        </div>
+        <div class="question">
+            <p>Question 17: We have to ensure the ____ as there are more than 8 billion people living on the planet.</p>
+            <div class="options">
+                <label><input type="radio" name="u10q17"> A. coral reef</label>
+                <label><input type="radio" name="u10q17"> B. carbon footprint</label>
+                <label><input type="radio" name="u10q17"> C. life expectancy</label>
+                <label><input type="radio" name="u10q17"> D. food security</label>
+            </div>
+            <div class="answer-key">✅ Key: D</div>
+        </div>
+        <div class="question">
+            <p>Question 18: The ________ of tigers in this country is being done in most national parks.</p>
+            <div class="options">
+                <label><input type="radio" name="u10q18"> A. conservation</label>
+                <label><input type="radio" name="u10q18"> B. conversation</label>
+                <label><input type="radio" name="u10q18"> C. chain</label>
+                <label><input type="radio" name="u10q18"> D. zone</label>
+            </div>
+            <div class="answer-key">✅ Key: A</div>
+        </div>
+        <div class="question">
+            <p>Question 19: The resource of valuable plants can _________ if we do not protect them.</p>
+            <div class="options">
+                <label><input type="radio" name="u10q19"> A. cut down</label>
+                <label><input type="radio" name="u10q19"> B. run out</label>
+                <label><input type="radio" name="u10q19"> C. locate in</label>
+                <label><input type="radio" name="u10q19"> D. depend on</label>
+            </div>
+            <div class="answer-key">✅ Key: B</div>
+        </div>
+        <div class="question">
+            <p>Question 20: You cannot take anything from the sea here. It is a _________ zone.</p>
+            <div class="options">
+                <label><input type="radio" name="u10q20"> A. no-taking</label>
+                <label><input type="radio" name="u10q20"> B. no-taken</label>
+                <label><input type="radio" name="u10q20"> C. no-take</label>
+                <label><input type="radio" name="u10q20"> D. no-took</label>
+            </div>
+            <div class="answer-key">✅ Key: C</div>
+        </div>
+
+        <h3>III. READING 📖</h3>
+        <p><strong>Task 1: Mark the letter A, B, C, or D to indicate the correct option that best fits each of the numbered blanks.</strong></p>
+        <div class="passage">
+            Wildlife conservation is the practice of protecting plant and animal species and their habitats. (21) _________ part of the world’s ecosystems, wildlife provides balance and stability to nature’s processes. The goal of wildlife conservation is to ensure the survival of these species, and to educate people (22) _________ living sustainably with other species. The human population has grown exponentially over the past 200 years, to more than seven billion people today, and it continues to rapidly grow. (23) _________ means natural resources are being consumed faster than ever by the billions of people on the planet. This growth and development also endangers the habitats and existence of various types of wildlife around the world, particularly animals and plants that may (24) _________ for land development, or used for food or other human purposes, other threats to wildlife include the (25) _________ of invasive species from other parts of the world, climate change, pollution, hunting, fishing, and poaching.
+        </div>
+        <div class="question">
+            <p>Question 21:</p>
+            <div class="options">
+                <label><input type="radio" name="u10q21"> A. As</label>
+                <label><input type="radio" name="u10q21"> B. Though</label>
+                <label><input type="radio" name="u10q21"> C. Besides</label>
+                <label><input type="radio" name="u10q21"> D. Despite</label>
+            </div>
+            <div class="answer-key">✅ Key: A</div>
+        </div>
+        <div class="question">
+            <p>Question 22:</p>
+            <div class="options">
+                <label><input type="radio" name="u10q22"> A. in</label>
+                <label><input type="radio" name="u10q22"> B. on</label>
+                <label><input type="radio" name="u10q22"> C. for</label>
+                <label><input type="radio" name="u10q22"> D. from</label>
+            </div>
+            <div class="answer-key">✅ Key: B</div>
+        </div>
+        <div class="question">
+            <p>Question 23:</p>
+            <div class="options">
+                <label><input type="radio" name="u10q23"> A. Those</label>
+                <label><input type="radio" name="u10q23"> B. Then</label>
+                <label><input type="radio" name="u10q23"> C. These</label>
+                <label><input type="radio" name="u10q23"> D. This</label>
+            </div>
+            <div class="answer-key">✅ Key: D</div>
+        </div>
+        <div class="question">
+            <p>Question 24:</p>
+            <div class="options">
+                <label><input type="radio" name="u10q24"> A. displace</label>
+                <label><input type="radio" name="u10q24"> B. displaced</label>
+                <label><input type="radio" name="u10q24"> C. be displaced</label>
+                <label><input type="radio" name="u10q24"> D. be displacing</label>
+            </div>
+            <div class="answer-key">✅ Key: C</div>
+        </div>
+        <div class="question">
+            <p>Question 25:</p>
+            <div class="options">
+                <label><input type="radio" name="u10q25"> A. belief</label>
+                <label><input type="radio" name="u10q25"> B. wildlife</label>
+                <label><input type="radio" name="u10q25"> C. introduction</label>
+                <label><input type="radio" name="u10q25"> D. documentary</label>
+            </div>
+            <div class="answer-key">✅ Key: C</div>
+        </div>
+
+        <p><strong>Task 2: Read the following passage and mark the letter A, B, C or D to indicate the correct answer to each of the questions.</strong></p>
+        <div class="passage">
+            In the past hundred years, biodiversity around the world has decreased dramatically. Many species have gone extinct. Extinction is a natural process; some species naturally die out while new species evolve. But human activity has changed the natural processes of extinction and evolution. Scientists estimate that they are dying out at hundreds of times the natural rate.<br><br>
+            A major reason for the loss of biodiversity is that natural habitats are being destroyed. The fields, forests, and wetlands where wild plants and animals live are disappearing. Land is cleared to plant crops or build houses and factories. Forests are cut for lumber and firewood. Between 1990 and 2005, the amount of forested land in Honduras, for instance, dropped 37 percent. As habitats shrink, fewer individuals can live there. The creatures that survive have fewer breeding partners, so genetic diversity declines.<br><br>
+            Pollution, overfishing, and overhunting have also caused a drop in biodiversity. Global climate change - the latest rise in the average temperature around the globe, linked to human activity - is also a factor. Warmer ocean temperatures damage fragile ecosystems such as coral reefs. A single coral reef can shelter 3,000 species of fish and other sea creatures such as clams and sea stars.
+        </div>
+        <div class="question">
+            <p>Question 26: Which of the following can be the best title for the passage?</p>
+            <div class="options">
+                <label><input type="radio" name="u10q26"> A. The Impact of Global Climate Change on Biodiversity</label>
+                <label><input type="radio" name="u10q26"> B. Natural Processes of Extinction and Evolution</label>
+                <label><input type="radio" name="u10q26"> C. Human Activity and Its Effects on Biodiversity</label>
+                <label><input type="radio" name="u10q26"> D. The Importance of Coral Reefs in Maintaining Biodiversity</label>
+            </div>
+            <div class="answer-key">✅ Key: C</div>
+        </div>
+        <div class="question">
+            <p>Question 27: The word “they” in paragraph 1 refers to _________.</p>
+            <div class="options">
+                <label><input type="radio" name="u10q27"> A. scientists</label>
+                <label><input type="radio" name="u10q27"> B. processes</label>
+                <label><input type="radio" name="u10q27"> C. species</label>
+                <label><input type="radio" name="u10q27"> D. habitats</label>
+            </div>
+            <div class="answer-key">✅ Key: C</div>
+        </div>
+        <div class="question">
+            <p>Question 28: What is the main reason for the loss of biodiversity mentioned in the passage?</p>
+            <div class="options">
+                <label><input type="radio" name="u10q28"> A. natural processes of extinction and evolution</label>
+                <label><input type="radio" name="u10q28"> B. pollution, overfishing, and overhunting</label>
+                <label><input type="radio" name="u10q28"> C. global climate change</label>
+                <label><input type="radio" name="u10q28"> D. destruction of natural habitats</label>
+            </div>
+            <div class="answer-key">✅ Key: D</div>
+        </div>
+        <div class="question">
+            <p>Question 29: The word “shrink” in paragraph 3 is closest in meaning to _________.</p>
+            <div class="options">
+                <label><input type="radio" name="u10q29"> A. decrease</label>
+                <label><input type="radio" name="u10q29"> B. expand</label>
+                <label><input type="radio" name="u10q29"> C. describe</label>
+                <label><input type="radio" name="u10q29"> D. manage</label>
+            </div>
+            <div class="answer-key">✅ Key: A</div>
+        </div>
+        <div class="question">
+            <p>Question 30: Which of the following is NOT true according to the passage?</p>
+            <div class="options">
+                <label><input type="radio" name="u10q30"> A. Extinction is a natural process that occurs over time.</label>
+                <label><input type="radio" name="u10q30"> B. Climate change does not have any effects on marine animals.</label>
+                <label><input type="radio" name="u10q30"> C. Land is cleared to build houses and factories.</label>
+                <label><input type="radio" name="u10q30"> D. Pollution and overfishing have contributed to declining biodiversity.</label>
+            </div>
+            <div class="answer-key">✅ Key: B</div>
+        </div>
+
+        <h3>IV. WRITING ✍️</h3>
+        <p><strong>Task 1: Mark the letter A, B, C, or D to indicate the correct arrangement of the sentences to make a meaningful paragraph.</strong></p>
+        <div class="question">
+            <p>Question 31:<br>
+            a. This simple habit has made a huge difference in how I feel.<br>
+            b. It’s a great way to stay focused and calm throughout the day.<br>
+            c. Practicing mindfulness has helped me reduce stress.<br>
+            d. I try to take at least 10 minutes every day to meditate.<br>
+            e. I highly recommend it to anyone looking to improve their mental well-being.</p>
+            <div class="options">
+                <label><input type="radio" name="u10q31"> A. c-d-b-a-e</label>
+                <label><input type="radio" name="u10q31"> B. b-a-c-d-e</label>
+                <label><input type="radio" name="u10q31"> C. a-c-b-d-e</label>
+                <label><input type="radio" name="u10q31"> D. c-e-a-b-d</label>
+            </div>
+            <div class="answer-key">✅ Key: A (c-d-b-a-e)</div>
+        </div>
+        <div class="question">
+            <p>Question 32:<br>
+            a. Kevin: That sounds fantastic! Did you do any hiking?<br>
+            b. Kevin: Hi, Lucy! How was your weekend trip to the mountains?<br>
+            c. Lucy: Hey, Kevin! It was amazing! The scenery was breathtaking.</p>
+            <div class="options">
+                <label><input type="radio" name="u10q32"> A. a-c-b</label>
+                <label><input type="radio" name="u10q32"> B. c-a-b</label>
+                <label><input type="radio" name="u10q32"> C. b-c-a</label>
+                <label><input type="radio" name="u10q32"> D. b-a-c</label>
+            </div>
+            <div class="answer-key">✅ Key: C (b-c-a)</div>
+        </div>
+
+        <p><strong>Task 2. Rewrite each sentence using the given word in brackets as long as its meaning stays the same as the original one.</strong></p>
+        <div class="question">
+            <p>Question 1: If we continue to use our natural resources too much, we will cause loss of biodiversity. (OVERUSE)</p>
+            <textarea rows="2">If we </textarea>
+            <div class="answer-key">✅ Key: If we continue to overuse our natural resources, we will cause loss of biodiversity.</div>
+        </div>
+        <div class="question">
+            <p>Question 2: The fishing cats are on the list of endangered species. People hunt too many of them. (Since)</p>
+            <textarea rows="2">The fishing cats </textarea>
+            <div class="answer-key">✅ Key: The fishing cats are on the list of endangered species since people hunt too many of them.</div>
+        </div>
+        <div class="question">
+            <p>Question 3: Conservation organisations are of great importance to protect rare species from hunting. (ROLE)</p>
+            <textarea rows="2">Conservation organizations </textarea>
+            <div class="answer-key">✅ Key: Conservation organizations play an important role in protecting rare species from hunting.</div>
+        </div>
+        <div class="question">
+            <p>Question 4: Both individuals and governments should take responsibility for protecting the environment. (RESPONSIBLE)</p>
+            <textarea rows="2">Both </textarea>
+            <div class="answer-key">✅ Key: Both individuals and governments should be responsible for protecting the environment.</div>
+        </div>
+
+    </div>
+
+    <button class="btn-submit" onclick="toggleAnswers()">🌸 Xem / Ẩn Đáp Án 🌸</button>
+</div>
+
+<script>
+    function openUnit(evt, unitName) {
+        var i, tabcontent, tablinks;
+        // Ẩn tất cả nội dung
+        tabcontent = document.getElementsByClassName("unit-content");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].classList.remove("active");
+        }
+        // Gỡ bỏ style active cho tất cả các tab
+        tablinks = document.getElementsByClassName("tab-link");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        // Hiển thị nội dung được chọn
+        document.getElementById(unitName).classList.add("active");
+        evt.currentTarget.className += " active";
+    }
+
+    function toggleAnswers() {
+        var container = document.querySelector('.container');
+        if(container.classList.contains('show-answers')) {
+            container.classList.remove('show-answers');
+        } else {
+            container.classList.add('show-answers');
+        }
+    }
+</script>
+
+</body>
+</html>
